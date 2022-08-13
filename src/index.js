@@ -21,13 +21,13 @@ import todoApp from "./reducers/reducers";
 
 // Definir a propriedade que será responsável por receber o valor a
 // criação da store e, também, o armazenamento do states.
-let criarStore = createStore(todoApp);
+let store = createStore(todoApp);
 
 let rootElement = document.getElementById('root');
 
 // Implementando o provider(provedor de conteudo)
 render(
-  <Provider proverStore = {criarStore}>
+  <Provider store = {store}>
     <App />
   </Provider>,
   rootElement
